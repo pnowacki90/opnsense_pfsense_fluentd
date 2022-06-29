@@ -1,0 +1,11 @@
+version: '2'
+services:
+  fluentd:
+    container_name: fluentd
+    image: custom-fluentd:latest
+    volumes:
+      - ./config:/fluentd/etc
+      - ../geoip/config/GeoLite2-City.mmdb:/fluentd/GeoLite2-City.mmdb:ro
+    ports:
+      - "5140:5140/tcp"
+      - "5140:5140/udp"
