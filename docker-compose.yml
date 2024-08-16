@@ -2,7 +2,7 @@
 services:
   fluentd:
     container_name: fluentd
-    image: custom-fluentd:latest
+    image: fluentd_2024:latest
     volumes:
       - ./config:/fluentd/etc
       - ../geoip/config/GeoLite2-City.mmdb:/fluentd/GeoLite2-City.mmdb:ro
